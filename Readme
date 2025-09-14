@@ -1,0 +1,80 @@
+# 🦾 EMG-Controlled Bionic Hand
+
+A lightweight, 3D-printed prosthetic hand operated by **EMG (electromyography) signals**.  
+Muscle signals from the user’s forearm are captured, processed with an **Arduino UNO**, and used to actuate the fingers via **Shape Memory Alloy (SMA) wires** or servos.  
+This project combines **electronics** and **mechanical design** to enable intuitive and low-cost prosthetic control.  
+
+---
+
+## ✨ Features
+- **3D-Printed Prosthetic Hand** – Lightweight and modular design.  
+- **Gesture Control** – Detects EMG signals for intuitive hand gestures.  
+- **Arduino-Based** – Arduino UNO handles EMG processing and actuator control.  
+- **Signal Processing** – Rectification, smoothing, and thresholding for reliable movement.  
+- **Tendon-Driven Fingers** – SMA wires/servos pull tendons, elastic bands return fingers.  
+
+---
+
+## ⚡ Hardware Requirements
+- Arduino UNO  
+- EMG sensor module (MyoWare / AD8226-based)  
+- Electrodes (3 per channel)  
+- Actuator: SMA wire (0.5 mm) or small servos  
+- 3D-printed prosthetic hand assembly  
+- Springs/elastic bands for finger return  
+- External power supply (for Arduino + sensors + SMA)  
+
+---
+
+## 🔧 Mechanical Design
+- **Palm & Fingers**: 3D-printed in PETG/PLA, with pin-jointed phalanges.  
+- **Tendons**: Dyneema/fishing line routed through finger channels.  
+- **Actuation**: SMA wire pulls tendon → finger bends.  
+- **Return Mechanism**: Elastic bands/springs restore neutral position.  
+- **Thumb**: Opposable, controlled separately.  
+- **Socket/Cuff**: Holds electronics and battery, padded for comfort.  
+- **Fingertips**: TPU/rubber pads for grip.  
+
+---
+
+## 🖥️ Signal Processing & Control
+1. **Acquire** EMG signals via electrodes.  
+2. **Amplify & Filter** using onboard EMG sensor circuitry.  
+3. **Arduino Reads** signal (0–1023 from analog pin).  
+4. **Thresholding & Mapping** → detect gestures (open hand, close hand, thumbs up).  
+5. **Actuate** SMA wire or servo → pull tendon → finger moves.  
+
+---
+
+## ⚙️ Setup & Assembly
+1. **Print** hand and finger components.  
+2. **Assemble** joints with pins and add tendons.  
+3. **Attach** SMA wires (or servos) to tendon anchors.  
+4. **Connect** EMG sensor to forearm muscles with electrodes.  
+5. **Wire** EMG output → Arduino analog input (A0/A1).  
+6. **Upload** Arduino sketch for EMG signal reading and actuator control.  
+7. **Calibrate** thresholds for reliable movement.  
+
+---
+
+## 🔬 Calibration
+- Place electrodes properly (muscle belly, muscle end, reference near bone).  
+- Adjust tendon length for neutral finger position.  
+- Tune Arduino thresholds for consistent gesture detection.  
+
+---
+
+## 🚀 Future Improvements
+- Multi-channel EMG for finer gesture recognition.  
+- Replace SMA with lightweight servos for faster response.  
+- Add wireless module for portable use.  
+- Improve socket ergonomics and comfort.  
+
+---
+
+## 📌 Project Workflow
+**Muscle contraction → EMG sensor → Arduino processing → Actuator → Finger movement**  
+
+---
+
+
